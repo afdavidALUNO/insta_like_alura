@@ -11,7 +11,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
  */
 async function getAltTextFromGemini(imageBuffer) {
     try {
-        const prompt = "Gere um alt text para a seguinte imagem";
+        const prompt = "Gere um alt text em português do brasil para a seguinte imagem";
         const image = {inlineData : {data: imageBuffer.toString('base64'), mimeType: "image/jpeg",},};
         const response = await model.generateContent([prompt, image]);
 
